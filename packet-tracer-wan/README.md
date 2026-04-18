@@ -59,11 +59,12 @@ The objective was to simulate real-world enterprise network connectivity while e
 ---
 
 ## Evidence
-Include screenshots such as:
-- Network topology diagram  
-- Router configuration (ACL rules)  
-- Successful ping tests between branches  
-- Packet Tracer simulation view  
+
+The Cisco Packet Tracer simulation file is included in this repository:
+
+- ghana-cape-verde-wan.pkt
+
+This file contains the full network topology, routing configuration, and ACL-based security implementation used in this project.
 
 ---
 
