@@ -83,10 +83,9 @@ This project analyzes network traffic behavior after connecting to a VPN (Proton
 ---
 
 ## Evidence
-This project is supported by Wireshark packet captures showing:
-- ICMP filtered traffic  
-- UDP VPN tunnel traffic  
-- TCP background connections  
+
+📄 Download the full report:
+- VPN Traffic Capture.docx
 
 ---
 
