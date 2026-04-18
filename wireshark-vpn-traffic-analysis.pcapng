@@ -1,0 +1,94 @@
+# Wireshark VPN Traffic Analysis (ProtonVPN)
+
+## Overview
+This project analyzes network traffic behavior after connecting to a VPN (ProtonVPN) using Wireshark. The goal is to observe how VPN usage affects packet visibility and network communication patterns.
+
+---
+
+## Objective
+- Establish a VPN connection using ProtonVPN  
+- Capture network traffic using Wireshark  
+- Generate network activity using ping tests  
+- Analyze ICMP, UDP, and TCP traffic patterns  
+- Understand how VPN affects packet visibility  
+
+---
+
+## Tools Used
+- Wireshark  
+- ProtonVPN  
+- Command Prompt (ping tool)  
+
+---
+
+## Implementation
+
+### 1. VPN Connection
+- Successfully connected to a remote ProtonVPN server  
+- Verified active VPN tunnel before traffic capture  
+
+---
+
+### 2. Packet Capture
+- Started Wireshark after VPN connection  
+- Captured general network traffic while VPN was active  
+- Observed encrypted traffic flow through VPN tunnel  
+
+---
+
+### 3. Traffic Generation (Ping Test)
+- Performed ping test to `google.com` using Command Prompt  
+- Generated ICMP packets for analysis  
+
+---
+
+## Packet Filtering & Analysis
+
+### ICMP Filter
+- Filter used: `icmp`  
+- Displayed packets from ping requests and responses  
+- Confirmed successful connectivity through VPN tunnel  
+
+---
+
+### UDP Filter
+- Filter used: `udp`  
+- Showed UDP traffic associated with VPN operations  
+- Indicates tunneling and background network activity  
+
+---
+
+### TCP Filter
+- Filter used: `tcp`  
+- Displayed background TCP connections during VPN session  
+- Included encrypted communication streams  
+
+---
+
+## Key Observations
+- VPN connection successfully encrypted outbound traffic  
+- ICMP packets (ping) were still visible but routed through VPN tunnel  
+- UDP traffic was prominent due to VPN tunneling protocol  
+- TCP traffic continued in background but was encrypted and less readable  
+- Destination visibility was reduced compared to non-VPN traffic  
+
+---
+
+## Security Insight
+- VPN encrypts traffic and hides direct destination visibility  
+- ICMP traffic can still be used for connectivity testing inside VPN  
+- UDP is commonly used for VPN tunneling protocols  
+- Wireshark can still capture metadata but not decrypted content  
+
+---
+
+## Evidence
+This project is supported by Wireshark packet captures showing:
+- ICMP filtered traffic  
+- UDP VPN tunnel traffic  
+- TCP background connections  
+
+---
+
+## Conclusion
+This project demonstrates how VPN technology affects network traffic visibility. Using Wireshark, it shows how encryption and tunneling protect user data while still allowing basic network communication such as ICMP ping tests.
